@@ -1,3 +1,5 @@
+# Section 1:
+
 ## AWS Console:
 
 - Always keep a watch on which region an instance is being created. As the instance created in one instance will not show up when another region is selected, but the billing will be happening.
@@ -47,5 +49,7 @@
 #### Why?
 
 - test
+
+---
 
 ---
