@@ -59,9 +59,10 @@ curl -X POST -u 'username:password' 'http://localhost:9200/my_index/my_type/1' -
 ```
 
 
-## API calls:
--	POST https://search-products-qvmazxjifjijxp7cp4xlqztqiu.ap-south-1.es.amazonaws.com/<indexname>
--	Authorization: Basic admin:password
+## Creating index:
+-	PUT https://search-demodomain2-vo2cbtzdc53o2yvygr6kntcqmu.ap-south-1.es.amazonaws.com/products
+<!-- -	Authorization: Basic admin:password -->
+-	Setup aws signature
 -	Body: {
   "settings": {
     "number_of_shards": 3,
@@ -70,8 +71,8 @@ curl -X POST -u 'username:password' 'http://localhost:9200/my_index/my_type/1' -
 }
 
 ### Adding doc:
--	POST https://search-products-qvmazxjifjijxp7cp4xlqztqiu.ap-south-1.es.amazonaws.com/<indexname>/_doc
--	Authorization: Basic admin:password
+-	POST https://search-demodomain2-vo2cbtzdc53o2yvygr6kntcqmu.ap-south-1.es.amazonaws.com/<indexname>/_doc/<docid?>
+<!-- -	Authorization: Basic admin:password -->
 -	Content-Type: application/json
 -	Body: {
   "name": "John Doe",
@@ -79,6 +80,14 @@ curl -X POST -u 'username:password' 'http://localhost:9200/my_index/my_type/1' -
   "email": "john.doe@example.com"
 }
 
+doc id auto created if not passed
+
 ### Fetching doc:
--	GET https://search-products-qvmazxjifjijxp7cp4xlqztqiu.ap-south-1.es.amazonaws.com/<indexname>/_doc/_docid
--	Authorization: Basic admin:password
+-	GET https://search-demodomain2-vo2cbtzdc53o2yvygr6kntcqmu.ap-south-1.es.amazonaws.com/products/_doc/<docid>
+<!-- -	Authorization: Basic admin:password -->
+
+### Update:
+POST https://search-demodomain2-vo2cbtzdc53o2yvygr6kntcqmu.ap-south-1.es.amazonaws.com/products/_doc/<docid>
+
+### Search:
+GET https://search-demodomain2-vo2cbtzdc53o2yvygr6kntcqmu.ap-south-1.es.amazonaws.com/products/_search?q=name:mac
