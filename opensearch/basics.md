@@ -54,6 +54,8 @@ curl -X POST -u 'username:password' 'http://localhost:9200/my_index/my_type/1' -
 - Opensearch CLI:
 - Third party tools: logstash, kibana
 
+```
+
 
 ## Creating index:
 -	PUT https://search-demodomain2-vo2cbtzdc53o2yvygr6kntcqmu.ap-south-1.es.amazonaws.com/products
@@ -67,7 +69,7 @@ curl -X POST -u 'username:password' 'http://localhost:9200/my_index/my_type/1' -
 }
 
 ### Adding doc:
--	POST https://search-demodomain2-vo2cbtzdc53o2yvygr6kntcqmu.ap-south-1.es.amazonaws.com/<indexname>/_doc/<docid?>
+-	POST https://search-demodomain2-vo2cbtzdc53o2yvygr6kntcqmu.ap-south-1.es.amazonaws.com/<indexname>/_doc/docid?
 <!-- -	Authorization: Basic admin:password -->
 -	Content-Type: application/json
 -	Body: {
@@ -79,11 +81,11 @@ curl -X POST -u 'username:password' 'http://localhost:9200/my_index/my_type/1' -
 doc id auto created if not passed
 
 ### Fetching doc:
--	GET https://search-demodomain2-vo2cbtzdc53o2yvygr6kntcqmu.ap-south-1.es.amazonaws.com/products/_doc/<docid>
+-	GET https://search-demodomain2-vo2cbtzdc53o2yvygr6kntcqmu.ap-south-1.es.amazonaws.com/products/_doc/docid
 <!-- -	Authorization: Basic admin:password -->
 
 ### Update:
-POST https://search-demodomain2-vo2cbtzdc53o2yvygr6kntcqmu.ap-south-1.es.amazonaws.com/products/_doc/<docid>
+POST https://search-demodomain2-vo2cbtzdc53o2yvygr6kntcqmu.ap-south-1.es.amazonaws.com/products/_doc/docid
 
 ### Search:
 GET https://search-demodomain2-vo2cbtzdc53o2yvygr6kntcqmu.ap-south-1.es.amazonaws.com/products/_search?q=name:mac
