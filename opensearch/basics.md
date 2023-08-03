@@ -56,8 +56,6 @@ curl -X POST -u 'username:password' 'http://localhost:9200/my_index/my_type/1' -
 
 ```
 
-```
-
 
 ## Creating index:
 -	PUT https://search-demodomain2-vo2cbtzdc53o2yvygr6kntcqmu.ap-south-1.es.amazonaws.com/products
