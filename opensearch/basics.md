@@ -12,9 +12,9 @@
   - installs the OpenSearch software on the EC2 instances.
   - creates a cluster with the specified number of nodes.
   - assigns shards to the nodes in the cluster.
-		-	Shards will help in evenly distributing the incoming data among the nodes.
-		-	If a doc has to be added to a specific shard, it can be specified by passing `_routing` while making API call.
-		-	If not passed, it will take the hash of the id, take its remainder/modulo
+    - Shards will help in evenly distributing the incoming data among the nodes.
+    - If a doc has to be added to a specific shard, it can be specified by passing `_routing` while making API call.
+    - If not passed, it will take the hash of the id, take its remainder/modulo
   - starts the OpenSearch service on the nodes in the cluster.
 
 - Two clusters are created, primary and standby. Primary stores all the data, and the standby cluster is a copy of primary to ensure availability of the domain if the primary cluster fails.
@@ -89,3 +89,9 @@ POST https://search-demodomain2-vo2cbtzdc53o2yvygr6kntcqmu.ap-south-1.es.amazona
 
 ### Search:
 GET https://search-demodomain2-vo2cbtzdc53o2yvygr6kntcqmu.ap-south-1.es.amazonaws.com/products/_search?q=name:mac
+
+
+## Resources:
+
+- https://www.youtube.com/watch?v=SIl5PM4m2KM
+```
